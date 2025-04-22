@@ -1,0 +1,19 @@
+# Example command to convert MIDI to JSON:
+# Replace 'example_song.mid' with your MIDI input file path.
+# Replace 'output_notes.json' with your desired JSON output file path (optional, defaults based on input).
+# The format (--format) is optional and defaults to 'pretty'.
+python midi_to_json.py ORIGINAL_SONG_MIDIS/kuufuku_short.mid -o ORIGINAL_SONG_JSONS/kuufuku_short.json --format pretty
+
+
+
+# Example command to convert JSON to MIDI:
+# Replace 'example_notes.json' with your JSON input file path.
+# Replace 'output_song.mid' with your desired MIDI output file path.
+# The tempo (-t) is optional and defaults to 120 BPM.
+python json_to_midi.py GPT_SONG_JSONS/gpt_kuufuku_short_1.json GPT_SONG_MIDIS/gpt_kuufuku_short_1.mid -t 120
+
+
+RECENT:
+python json_to_midi.py GPT_SONG_JSONS/modified_ballade_no_1.json GPT_SONG_MIDIS/modified_ballade_no_1.mid
+
+python midi_to_json.py ORIGINAL_SONG_MIDIS/ballade_no_1.mid -o ORIGINAL_SONG_JSONS/ballade_no_1.json --format pretty

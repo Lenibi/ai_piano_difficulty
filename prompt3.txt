@@ -1,0 +1,40 @@
+APPLY THESE CHANGES BELOW TO THE ATTACHED JSON FILE OF NOTES
+
+OUTPUT FORMAT:
+Return a JSON object. This object must have these top-level properties:
+- resolution: Ticks per quarter note (integer). Use 480 if unsure.
+- tempo_map: A JSON array containing at least one tempo object.
+    - Each tempo object must have "beat" (float, time in beats) and "bpm" (float, tempo in beats per minute).
+    - Example: [{"beat": 0.0, "bpm": 120.0}]
+- notes: A JSON array of note objects. Each note object must have these properties:
+    - pitch: MIDI note number (0-127)
+    - start_beat: start time in beats (float, non-negative)
+    - duration_beat: duration in beats (float, must be positive)
+    - velocity: MIDI velocity (1-127)
+    - (Optional) track: MIDI track number (integer, e.g., 0)
+    - (Optional) channel: MIDI channel number (integer, 0-15)
+
+EXAMPLE OUTPUT FORMAT:
+{
+  "resolution": 480,
+  "tempo_map": [
+    {"beat": 0.0, "bpm": 120.0}
+  ],
+  "notes": [
+    {"pitch": 60, "start_beat": 0.0, "duration_beat": 1.0, "velocity": 80, "track": 0},
+    {"pitch": 64, "start_beat": 1.0, "duration_beat": 0.5, "velocity": 85, "track": 0}
+  ]
+}
+
+
+
+Do not say things like:
+"// ... many more transformed notes follow"
+Don't say this. Give me the full thing, all the notes. RETURN ONLY JSON DO NOT CUT IT OFF. ENSURE ALL NOTES ARE THERE NO EXTRA TEXT.
+
+Can you make this the most insane cover ever of this piece? add crazy arpgeios, chords, notes, make it super hard insane impossible cover sounds insane crazy difficult hard insane mega cover
+insane fast repeated notes, insane wide leaps, insane polyrhythms, insane chords insane impossible insane arpeggios
+Don't say things like this: "... (remaining notes including full arpeggios, chords, and original notes without omission) ..."
+Don't say things like "&#8203;:contentReference[oaicite:0]{index=0}&#8203;"
+OUTPUT EXTRA TEXT, ONLY JSON NOTES. DONT CROP THE FINAL OUTPUT I WANT THE ENTIRE OUTPUT
+PLEASE DO NOT HAVE TEMPO CHANGES UNLESS THE ORIGINAL PIECE HAS
